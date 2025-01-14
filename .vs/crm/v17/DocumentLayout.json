@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\C#\\crm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\database\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\database\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\database\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\database\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "crm\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
-              "RelativeToolTip": "crm\\MainWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "authorization.xaml",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml",
+              "RelativeDocumentMoniker": "crm\\authorization.xaml",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml",
+              "RelativeToolTip": "crm\\authorization.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-14T14:23:04.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "crm\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
-              "RelativeToolTip": "crm\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:22:45.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseConnection.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\DatabaseConnection.cs",
-              "RelativeDocumentMoniker": "crm\\database\\DatabaseConnection.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\DatabaseConnection.cs",
-              "RelativeToolTip": "crm\\database\\DatabaseConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:21:36.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseConfig.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\DatabaseConfig.cs",
-              "RelativeDocumentMoniker": "crm\\database\\DatabaseConfig.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\DatabaseConfig.cs",
-              "RelativeToolTip": "crm\\database\\DatabaseConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:21:10.888Z",
               "EditorCaption": ""
             }
           ]

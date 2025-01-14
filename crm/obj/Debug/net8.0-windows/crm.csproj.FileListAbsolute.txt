@@ -17,8 +17,6 @@ C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\runtimes\win-x64\nati
 C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.csproj.AssemblyReference.cache
-C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm_MarkupCompile.cache
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.g.resources
@@ -32,3 +30,6 @@ C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\refint\crm.dll
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.pdb
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.genruntimeconfig.cache
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\ref\crm.dll
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.sourcelink.json
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\authorization.baml
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\authorization.g.cs

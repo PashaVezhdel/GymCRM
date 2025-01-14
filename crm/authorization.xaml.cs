@@ -3,12 +3,9 @@ using System.Windows;
 
 namespace GymCRM
 {
-    public partial class MainWindow : Window
+    public partial class authorization : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public authorization() => InitializeComponent();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
