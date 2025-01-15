@@ -1,28 +1,66 @@
 ﻿using System;
+using System.Data;
 using System.Windows;
+using MySql.Data.MySqlClient;
 
 namespace GymCRM
 {
     public partial class authorization : Window
     {
-        public authorization() => InitializeComponent();
+        private readonly DatabaseConnection _dbConnection;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public authorization()
         {
-            // Створюємо екземпляр класу для підключення
-            DatabaseConnection dbConnection = new DatabaseConnection();
+            InitializeComponent();
+            _dbConnection = new DatabaseConnection(); 
+        }
 
-            // Викликаємо метод підключення
-            bool isConnected = dbConnection.Connect();
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = LoginTextBox.Text;
+            string password = PasswordBox.Password;
 
-            // Виводимо повідомлення про результат
-            if (isConnected)
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Connection successful!");
+                MessageBox.Show("Будь ласка, заповніть усі поля.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Connection failed!");
+                using (MySqlConnection connection = new MySqlConnection(DatabaseConfig.ConnectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT role FROM users WHERE username = @username AND password = @password";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string role = result.ToString();
+                            MessageBox.Show($"Вхід успішний! Ваша роль: {role}", "GymCRM", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                            // Логіка відкриття вікна залежно від ролі
+                            // Наприклад:
+                            // if (role == "ADMIN") { OpenAdminWindow(); }
+                            // else if (role == "EMPLOYEE") { OpenEmployeeWindow(); }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Невірний логін або пароль.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка при підключенні до бази даних: {ex.Message}", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

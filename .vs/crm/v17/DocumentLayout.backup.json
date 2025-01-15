@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\C#\\crm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "authorization.xaml.cs",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
               "RelativeDocumentMoniker": "crm\\authorization.xaml.cs",
               "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
               "RelativeToolTip": "crm\\authorization.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T19:51:18.236Z",
+              "WhenOpened": "2025-01-14T20:11:08.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "authorization.g.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs",
-              "RelativeDocumentMoniker": "crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs",
-              "RelativeToolTip": "crm\\obj\\Debug\\net8.0-windows\\authorization.g.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAADwvygAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T19:51:09.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "crm\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AssemblyInfo.cs",
-              "RelativeToolTip": "crm\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T19:50:49.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\App.xaml",
-              "RelativeDocumentMoniker": "crm\\App.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\App.xaml",
-              "RelativeToolTip": "crm\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-14T19:50:34.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "authorization.xaml",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml",
               "RelativeDocumentMoniker": "crm\\authorization.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml*",
-              "RelativeToolTip": "crm\\authorization.xaml*",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml",
+              "RelativeToolTip": "crm\\authorization.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-14T14:23:04.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T14:23:04.63Z"
             }
           ]
         }
