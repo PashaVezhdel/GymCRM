@@ -1,0 +1,75 @@
+﻿<Window x:Class="GymCRM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GymCRM" Height="800" Width="1200">
+    <Grid>
+        <!-- Верхня панель -->
+        <Grid Margin="10" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Content="Новий клієнт" Height="40" />
+            <Button Grid.Column="1" Content="Панель адміністратора" Height="40" />
+
+            <!-- Пошук -->
+            <TextBox Grid.Column="2" Width="200" VerticalAlignment="Center" Margin="10,0" 
+                     ToolTip="Введіть текст для пошуку" />
+
+            <CheckBox Grid.Column="3" Content="Нульовий баланс" VerticalAlignment="Center" />
+            <Button Grid.Column="4" Content="Звіти" Height="40" />
+            <Button Grid.Column="5" Content="Статистика" Height="40" />
+            <Button Grid.Column="6" Content="Вийти" Height="40" />
+        </Grid>
+
+        <!-- Таблиця -->
+        <DataGrid x:Name="ClientsDataGrid" Margin="10,60,10,300" 
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ПІБ" Width="*" Binding="{Binding FullName}" />
+                <DataGridTextColumn Header="Дата народження" Width="200" Binding="{Binding DateOfBirth}" />
+                <DataGridTextColumn Header="Номер телефону" Width="200" Binding="{Binding PhoneNumber}" />
+                <DataGridTextColumn Header="Останній платіж" Width="200" Binding="{Binding LastPayment}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Деталі клієнта -->
+        <Grid Margin="10" VerticalAlignment="Bottom" Height="250">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Ліва частина -->
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть ПІБ" />
+                <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження" />
+                <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону" />
+                <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть останній платіж" />
+                <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Закінчення підписки" />
+                <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення" />
+                <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Баланс" />
+            </StackPanel>
+
+            <!-- Права частина -->
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <Button Content="Зняти з балансу" Width="150" Margin="5" />
+                    <Button Content="Поповнити баланс" Width="150" Margin="5" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <Button Content="Зберегти зміни" Width="150" Margin="5" />
+                    <Button Content="Видалити клієнта" Width="150" Margin="5" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

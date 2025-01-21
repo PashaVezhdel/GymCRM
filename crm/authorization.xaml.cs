@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
@@ -12,7 +11,7 @@ namespace GymCRM
         public authorization()
         {
             InitializeComponent();
-            _dbConnection = new DatabaseConnection(); 
+            _dbConnection = new DatabaseConnection();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -46,10 +45,12 @@ namespace GymCRM
                             string role = result.ToString();
                             MessageBox.Show($"Вхід успішний! Ваша роль: {role}", "GymCRM", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                            // Логіка відкриття вікна залежно від ролі
-                            // Наприклад:
-                            // if (role == "ADMIN") { OpenAdminWindow(); }
-                            // else if (role == "EMPLOYEE") { OpenEmployeeWindow(); }
+                            // Відкриваємо MainWindow перед закриттям поточного вікна
+                            MainWindow mainWindow = new MainWindow();
+                            mainWindow.Show();
+
+                            // Закриваємо вікно авторизації після того, як MainWindow відкрито
+                            this.Close();
                         }
                         else
                         {

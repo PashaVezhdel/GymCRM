@@ -33,3 +33,5 @@ C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\ref\crm.dll
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm.sourcelink.json
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\authorization.baml
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\authorization.g.cs
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\MainWindow.g.cs
