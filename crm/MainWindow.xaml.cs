@@ -9,6 +9,11 @@ namespace GymCRM
             InitializeComponent();
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            authorization authWindow = new authorization();
+            authWindow.Show();
+            this.Close();
+        }
     }
 }

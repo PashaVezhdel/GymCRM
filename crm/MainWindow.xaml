@@ -25,7 +25,7 @@
             <CheckBox Grid.Column="3" Content="Нульовий баланс" VerticalAlignment="Center" />
             <Button Grid.Column="4" Content="Звіти" Height="40" />
             <Button Grid.Column="5" Content="Статистика" Height="40" />
-            <Button Grid.Column="6" Content="Вийти" Height="40" />
+            <Button Grid.Column="6" Content="Вийти" Height="40" Click="Button_Click" />
         </Grid>
 
         <!-- Таблиця -->
