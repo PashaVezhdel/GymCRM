@@ -31,8 +31,7 @@
         <!-- Таблиця -->
         <DataGrid x:Name="ClientsDataGrid" Margin="10,60,10,300" 
                   AutoGenerateColumns="True" IsReadOnly="True"
-                  ItemsSource="{Binding Clients}">
-            <!-- Тут видалено заголовки колонок, тепер вони будуть генеруватися автоматично -->
+                  SelectionChanged="ClientsDataGrid_SelectionChanged">
         </DataGrid>
 
         <!-- Деталі клієнта -->
@@ -44,18 +43,18 @@
 
             <!-- Ліва частина -->
             <StackPanel Grid.Column="0" Margin="10">
-                <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть ПІБ" Text="{Binding SelectedClient.FullName}" />
-                <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження" Text="{Binding SelectedClient.DateOfBirth}" />
-                <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону" Text="{Binding SelectedClient.PhoneNumber}" />
-                <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть останній платіж" Text="{Binding SelectedClient.LastPayment}" />
-                <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Закінчення підписки" Text="{Binding SelectedClient.SubscriptionEndDate}" />
-                <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення" Text="{Binding SelectedClient.CreationDate}" />
-                <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Баланс" Text="{Binding SelectedClient.Balance}" />
+                <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть ПІБ" />
+                <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження" />
+                <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону" />
+                <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть останній платіж" />
+                <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Закінчення підписки" />
+                <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення" />
+                <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Баланс" />
             </StackPanel>
 
             <!-- Права частина -->
             <StackPanel Grid.Column="1" Margin="10">
-                <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding SelectedClient.Comments}" ToolTip="Коментар" />
+                <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                     <Button Content="Зняти з балансу" Width="150" Margin="5" />
                     <Button Content="Поповнити баланс" Width="150" Margin="5" />
