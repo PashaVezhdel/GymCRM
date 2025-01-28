@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Globalization;
 
 namespace GymCRM
 {
@@ -23,7 +24,7 @@ namespace GymCRM
         private void LoadClientsData()
         {
             string connectionString = DatabaseConfig.ConnectionString;
-            string query = "SELECT * FROM Clients"; 
+            string query = "SELECT * FROM Clients";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -31,9 +32,10 @@ namespace GymCRM
                 {
                     connection.Open();
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
-                    dataAdapter.Fill(Clients); 
+                    DataTable clientsDataTable = new DataTable();
+                    dataAdapter.Fill(clientsDataTable);
 
-                    ClientsDataGrid.ItemsSource = Clients.DefaultView; 
+                    ClientsDataGrid.ItemsSource = clientsDataTable.DefaultView;
                 }
                 catch (Exception ex)
                 {
@@ -46,17 +48,27 @@ namespace GymCRM
         {
             if (ClientsDataGrid.SelectedItem is DataRowView rowView)
             {
-                SelectedClient = rowView.Row; 
+                SelectedClient = rowView.Row;
+
                 FullNameTextBox.Text = SelectedClient["full_name"].ToString();
-                DateOfBirthTextBox.Text = SelectedClient["date_of_birth"].ToString();
-                PhoneNumberTextBox.Text = SelectedClient["phone_number"].ToString();
-                LastPaymentTextBox.Text = SelectedClient["last_payment_date"].ToString();
-                SubscriptionEndTextBox.Text = SelectedClient["subscription_end_date"].ToString();
+
+                if (SelectedClient["date_of_birth"] != DBNull.Value)
+                    DateOfBirthTextBox.Text = ((DateTime)SelectedClient["date_of_birth"]).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
+                if (SelectedClient["last_payment_date"] != DBNull.Value)
+                    LastPaymentTextBox.Text = ((DateTime)SelectedClient["last_payment_date"]).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
+                if (SelectedClient["subscription_end_date"] != DBNull.Value)
+                    SubscriptionEndTextBox.Text = ((DateTime)SelectedClient["subscription_end_date"]).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
+
                 CreationDateTextBox.Text = SelectedClient["created_at"].ToString();
-                BalanceTextBox.Text = SelectedClient["balance"].ToString();
+                BalanceTextBox.Text = Convert.ToDecimal(SelectedClient["balance"]).ToString("0.##");
+
+                if (SelectedClient["phone_number"] != DBNull.Value)
+                    PhoneNumberTextBox.Text = SelectedClient["phone_number"].ToString();
+
                 CommentTextBox.Text = SelectedClient["comments"].ToString();
             }
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
