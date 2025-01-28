@@ -134,7 +134,46 @@ namespace GymCRM
             }
         }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            /* Перевірка даних перед виконанням збереження
+            if (!ValidateInput())
+            {
+                MessageBox.Show("Заповніть всі поля!");
+                return;
+            } */
 
+            try
+            {
+                string connectionString = DatabaseConfig.ConnectionString;
+                string query = "UPDATE Clients SET full_name = @full_name, date_of_birth = @date_of_birth, " +
+                               "phone_number = @phone_number, last_payment_date = @last_payment_date, " +
+                               "subscription_end_date = @subscription_end_date, balance = @balance " +
+                               "WHERE id = @id";
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@full_name", FullNameTextBox.Text);
+                    command.Parameters.AddWithValue("@date_of_birth", DateOfBirthTextBox.Text);
+                    command.Parameters.AddWithValue("@phone_number", PhoneNumberTextBox.Text);
+                    command.Parameters.AddWithValue("@last_payment_date", LastPaymentTextBox.Text);
+                    command.Parameters.AddWithValue("@subscription_end_date", SubscriptionEndTextBox.Text);
+                    command.Parameters.AddWithValue("@balance", BalanceTextBox.Text);
+                    command.Parameters.AddWithValue("@id", SelectedClient["id"]);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Зміни успішно збережено.");
+                    UpdateClientsList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Помилка при збереженні змін: " + ex.Message);
+            }
+        }
 
     }
 }

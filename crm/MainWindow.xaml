@@ -55,7 +55,7 @@
                     <Button Content="Поповнити баланс" Width="150" Margin="5" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                    <Button Content="Зберегти зміни" Width="150" Margin="5"/>
+                    <Button Content="Зберегти зміни" Width="150" Margin="5" Click="Button_Click_2"/>
                     <Button Content="Видалити клієнта" Width="150" Margin="5" Click="Button_Click_1" />
                 </StackPanel>
             </StackPanel>
