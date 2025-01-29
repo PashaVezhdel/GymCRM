@@ -40,10 +40,10 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Margin="10">
-                <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть ПІБ" />
-                <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження" />
-                <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону" />
-                <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть останній платіж" />
+                <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="ПІБ" />
+                <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Дата народження" />
+                <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Номер телефону" />
+                <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Останній платіж" />
                 <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Закінчення підписки" />
                 <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення" />
                 <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Баланс" />
