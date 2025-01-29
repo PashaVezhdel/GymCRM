@@ -71,14 +71,14 @@ namespace GymCRM
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
             authorization authWindow = new authorization();
             authWindow.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Delete(object sender, RoutedEventArgs e)
         {
             if (SelectedClient == null)
             {
@@ -147,7 +147,7 @@ namespace GymCRM
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Save(object sender, RoutedEventArgs e)
         {
             if (!ValidateInput())
             {
@@ -243,7 +243,7 @@ namespace GymCRM
             return true;  
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void UpdateList(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -255,7 +255,7 @@ namespace GymCRM
             }
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Search(object sender, RoutedEventArgs e)
         {
             string searchText = SearchTextBox.Text.Trim();
 
