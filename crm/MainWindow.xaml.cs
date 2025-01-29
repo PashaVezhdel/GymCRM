@@ -5,6 +5,7 @@ using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Globalization;
+using crm;
 
 namespace GymCRM
 {
@@ -240,5 +241,19 @@ namespace GymCRM
 
             return true;  
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UpdateClientsList();
+                MessageBox.Show("Список клієнтів успішно оновлено!", "Оновлення даних", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Помилка при оновленні списку клієнтів: " + ex.Message, "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
     }
 }
