@@ -248,11 +248,50 @@ namespace GymCRM
             try
             {
                 UpdateClientsList();
-                MessageBox.Show("Список клієнтів успішно оновлено!", "Оновлення даних", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Помилка при оновленні списку клієнтів: " + ex.Message, "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            string searchText = SearchTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Будь ласка, введіть номер телефону або ПІБ для пошуку.");
+                return;
+            }
+
+            var databaseConnection = new DatabaseConnection();
+            if (!databaseConnection.Connect())
+            {
+                MessageBox.Show("Не вдалося підключитися до бази даних.");
+                return;
+            }
+
+            string query = "SELECT * FROM clients WHERE full_name LIKE @searchText OR phone_number LIKE @searchText";
+
+            using (var connection = new MySqlConnection(DatabaseConfig.ConnectionString))
+            {
+                connection.Open();
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+
+                var reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Клієнтів не знайдено.");
+                }
+                else
+                {
+                    ClientsDataGrid.ItemsSource = dt.DefaultView;
+                }
             }
         }
 

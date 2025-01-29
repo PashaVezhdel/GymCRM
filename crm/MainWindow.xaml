@@ -17,11 +17,12 @@
             <Button Grid.Column="0" Content="Новий клієнт" Height="40" />
             <Button Grid.Column="1" Content="Панель адміністратора" Height="40" />
 
-            <TextBox Grid.Column="2" Width="200" VerticalAlignment="Center" Margin="10,0" 
+            <TextBox x:Name="SearchTextBox" Grid.Column="2" Width="200" VerticalAlignment="Center" Margin="10,0" 
                      ToolTip="Введіть текст для пошуку" />
 
+
             <Button Grid.Column="3" Width="120" VerticalAlignment="Center" Margin="5,0"
-                    Content="Пошук" ToolTip="Натисніть, щоб знайти клієнта"/>
+                    Content="Пошук" ToolTip="Натисніть, щоб знайти клієнта" Click="Button_Click_4"/>
             <Button Grid.Column="4" Content="Звіти" Height="40" />
             <Button Grid.Column="5" Content="Оновити дані" Height="40" Click="Button_Click_3" />
             <Button Grid.Column="6" Content="Вийти" Height="40" Click="Button_Click"/>
