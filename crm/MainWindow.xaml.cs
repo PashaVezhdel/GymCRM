@@ -61,8 +61,7 @@ namespace GymCRM
                     SubscriptionEndTextBox.Text = ((DateTime)SelectedClient["subscription_end_date"]).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
 
                 CreationDateTextBox.Text = SelectedClient["created_at"].ToString();
-                BalanceTextBox.Text = Convert.ToDecimal(SelectedClient["balance"]).ToString("0.##");
-
+                BalanceTextBox.Text = Convert.ToDecimal(SelectedClient["balance"]).ToString("F2", CultureInfo.InvariantCulture);
                 if (SelectedClient["phone_number"] != DBNull.Value)
                     PhoneNumberTextBox.Text = SelectedClient["phone_number"].ToString();
 
