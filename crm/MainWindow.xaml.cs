@@ -233,9 +233,10 @@ namespace GymCRM
             }
 
             decimal balance;
-            if (!decimal.TryParse(BalanceTextBox.Text, out balance) || balance < 0)
+            var cultureInfo = new System.Globalization.CultureInfo("en-US");
+            if (!decimal.TryParse(BalanceTextBox.Text, System.Globalization.NumberStyles.Any, cultureInfo, out balance))
             {
-                MessageBox.Show("Будь ласка, введіть правильний баланс (введіть число більше або рівне нулю).");
+                MessageBox.Show("Будь ласка, введіть коректно баланс.");
                 return false;
             }
 
