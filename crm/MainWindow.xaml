@@ -52,7 +52,7 @@
             <StackPanel Grid.Column="1" Margin="10">
                 <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                    <Button Content="Фінансові операції з балансом" Width="250" Margin="5"/>
+                    <Button Content="Фінансові операції з балансом" Width="250" Margin="5" Click="Button_Click_4"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                     <Button Content="Зберегти зміни" Width="150" Margin="5" Click="Button_Click_2"/>

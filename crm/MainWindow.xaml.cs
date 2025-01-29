@@ -255,5 +255,11 @@ namespace GymCRM
             }
         }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            FinancialOperations financialWindow = new FinancialOperations();
+            financialWindow.Show();
+        }
+
     }
 }
