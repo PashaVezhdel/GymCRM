@@ -1,27 +1,103 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using GymCRM;
+using MySql.Data.MySqlClient;
 
 namespace crm
 {
-    /// <summary>
-    /// Interaction logic for ClientRegistration.xaml
-    /// </summary>
     public partial class ClientRegistration : Window
     {
         public ClientRegistration()
         {
             InitializeComponent();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ValidateInput())
+            {
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(DatabaseConfig.ConnectionString))
+                    {
+                        connection.Open();
+
+                        string query = "INSERT INTO clients (full_name, date_of_birth, phone_number, last_payment_date, subscription_end_date, comments, balance) " +
+                                       "VALUES (@fullName, @dateOfBirth, @phoneNumber, @lastPaymentDate, @subscriptionEndDate, @comments, @balance)";
+
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@fullName", FullNameTextBox.Text);
+                            command.Parameters.AddWithValue("@dateOfBirth", DateOfBirthTextBox.Text);
+                            command.Parameters.AddWithValue("@phoneNumber", PhoneNumberTextBox.Text);
+                            command.Parameters.AddWithValue("@lastPaymentDate", LastPaymentDateTextBox.Text);
+                            command.Parameters.AddWithValue("@subscriptionEndDate", SubscriptionEndDateTextBox.Text);
+                            command.Parameters.AddWithValue("@comments", CommentTextBox.Text);
+                            command.Parameters.AddWithValue("@balance", decimal.Parse(BalanceTextBox.Text));
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Клієнта успішно зареєстровано!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка під час реєстрації: " + ex.Message);
+                }
+            }
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(FullNameTextBox.Text) ||
+                string.IsNullOrWhiteSpace(DateOfBirthTextBox.Text) ||
+                string.IsNullOrWhiteSpace(PhoneNumberTextBox.Text) ||
+                string.IsNullOrWhiteSpace(LastPaymentDateTextBox.Text) ||
+                string.IsNullOrWhiteSpace(SubscriptionEndDateTextBox.Text) ||
+                string.IsNullOrWhiteSpace(BalanceTextBox.Text))
+            {
+                MessageBox.Show("Будь ласка, заповніть всі поля!");
+                return false;
+            }
+
+            DateTime dateOfBirth;
+            if (!DateTime.TryParseExact(DateOfBirthTextBox.Text, "yyyy/MM/dd", null, System.Globalization.DateTimeStyles.None, out dateOfBirth))
+            {
+                MessageBox.Show("Будь ласка, введіть правильну дату народження (формат: РРРР/ММ/ДД).");
+                return false;
+            }
+
+            DateTime lastPaymentDate;
+            if (!DateTime.TryParseExact(LastPaymentDateTextBox.Text, "yyyy/MM/dd", null, System.Globalization.DateTimeStyles.None, out lastPaymentDate))
+            {
+                MessageBox.Show("Будь ласка, введіть правильну дату останнього платежу (формат: РРРР/ММ/ДД).");
+                return false;
+            }
+
+            DateTime subscriptionEndDate;
+            if (!DateTime.TryParseExact(SubscriptionEndDateTextBox.Text, "yyyy/MM/dd", null, System.Globalization.DateTimeStyles.None, out subscriptionEndDate))
+            {
+                MessageBox.Show("Будь ласка, введіть правильну дату закінчення підписки (формат: РРРР/ММ/ДД).");
+                return false;
+            }
+
+            string phonePattern = @"^\+380\d{9}$";
+            if (!System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberTextBox.Text, phonePattern))
+            {
+                MessageBox.Show("Будь ласка, введіть правильний номер телефону (формат: +380XXXXXXXXX).");
+                return false;
+            }
+
+            decimal balance;
+            var cultureInfo = new System.Globalization.CultureInfo("en-US");
+            if (!decimal.TryParse(BalanceTextBox.Text, System.Globalization.NumberStyles.Any, cultureInfo, out balance))
+            {
+                MessageBox.Show("Будь ласка, введіть коректно баланс.");
+                return false;
+            }
+
+            return true;
         }
     }
 }
