@@ -294,5 +294,11 @@ namespace GymCRM
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ClientRegistration registrationWindow = new ClientRegistration();
+            registrationWindow.Show();
+        }
+
     }
 }

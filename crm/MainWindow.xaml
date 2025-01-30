@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Content="Новий клієнт" Height="40" />
+            <Button Grid.Column="0" Content="Новий клієнт" Height="40" Click="Button_Click" />
             <Button Grid.Column="1" Content="Панель адміністратора" Height="40" />
 
             <TextBox x:Name="SearchTextBox" Grid.Column="2" Width="200" VerticalAlignment="Center" Margin="10,0" 
