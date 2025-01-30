@@ -12,6 +12,7 @@ namespace crm
             InitializeComponent();
         }
 
+
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             if (ValidateInput())
@@ -33,13 +34,24 @@ namespace crm
                             command.Parameters.AddWithValue("@lastPaymentDate", LastPaymentDateTextBox.Text);
                             command.Parameters.AddWithValue("@subscriptionEndDate", SubscriptionEndDateTextBox.Text);
                             command.Parameters.AddWithValue("@comments", CommentTextBox.Text);
-                            command.Parameters.AddWithValue("@balance", decimal.Parse(BalanceTextBox.Text));
+
+                            string balanceText = BalanceTextBox.Text.Replace(',', '.');
+                            decimal balance;
+                            if (decimal.TryParse(balanceText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out balance))
+                            {
+                                command.Parameters.AddWithValue("@balance", balance);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Будь ласка, введіть коректно баланс.");
+                                return;
+                            }
 
                             command.ExecuteNonQuery();
                         }
                     }
-
                     MessageBox.Show("Клієнта успішно зареєстровано!");
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -89,9 +101,9 @@ namespace crm
                 return false;
             }
 
+            string balanceText = BalanceTextBox.Text.Replace(',', '.');  
             decimal balance;
-            var cultureInfo = new System.Globalization.CultureInfo("en-US");
-            if (!decimal.TryParse(BalanceTextBox.Text, System.Globalization.NumberStyles.Any, cultureInfo, out balance))
+            if (!decimal.TryParse(balanceText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out balance))
             {
                 MessageBox.Show("Будь ласка, введіть коректно баланс.");
                 return false;

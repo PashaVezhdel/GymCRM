@@ -124,7 +124,7 @@ namespace GymCRM
             }
         }
 
-        private void UpdateClientsList()
+        public void UpdateClientsList()
         {
             string connectionString = DatabaseConfig.ConnectionString;
             string query = "SELECT * FROM Clients";
@@ -242,7 +242,7 @@ namespace GymCRM
             return true;  
         }
 
-        private void UpdateList(object sender, RoutedEventArgs e)
+        public void UpdateList(object sender, RoutedEventArgs e)
         {
             try
             {
