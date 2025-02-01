@@ -38,3 +38,5 @@ C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\ClientRegistration.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm_MarkupCompile.lref
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\ClientRegistration.baml
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\Statistics.g.cs
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\Statistics.baml

@@ -300,5 +300,10 @@ namespace GymCRM
             registrationWindow.Show();
         }
 
+        private void Statistics(object sender, RoutedEventArgs e)
+        {
+            Statistics statisticsWindow = new Statistics();
+            statisticsWindow.Show();
+        }
     }
 }
