@@ -20,6 +20,17 @@ namespace GymCRM
             Clients = new DataTable(); 
             LoadClientsData();
             DataContext = this;
+            this.Closing += MainWindow_Closing;
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string username = UserSession.GetUsername();
+
+            if (!string.IsNullOrEmpty(username))
+            {
+                new UserLogger(DatabaseConfig.ConnectionString).LogUserActivity(username, "LOGOUT");
+            }
         }
 
         private void LoadClientsData()

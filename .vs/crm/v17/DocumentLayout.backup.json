@@ -38,12 +38,11 @@
               "Title": "UserSession.cs",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserSession.cs",
               "RelativeDocumentMoniker": "crm\\database\\UserSession.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserSession.cs*",
-              "RelativeToolTip": "crm\\database\\UserSession.cs*",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserSession.cs",
+              "RelativeToolTip": "crm\\database\\UserSession.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAywCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T15:31:02.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T15:31:02.267Z"
             },
             {
               "$type": "Document",
@@ -51,9 +50,9 @@
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "crm\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "crm\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
+              "RelativeToolTip": "crm\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T15:28:45.766Z",
               "EditorCaption": ""
@@ -64,12 +63,11 @@
               "Title": "authorization.xaml.cs",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
               "RelativeDocumentMoniker": "crm\\authorization.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs*",
-              "RelativeToolTip": "crm\\authorization.xaml.cs*",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
+              "RelativeToolTip": "crm\\authorization.xaml.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAIwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T15:27:43.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T15:27:43.734Z"
             },
             {
               "$type": "Document",
@@ -77,12 +75,11 @@
               "Title": "UserLogger.cs",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserLogger.cs",
               "RelativeDocumentMoniker": "crm\\database\\UserLogger.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserLogger.cs*",
-              "RelativeToolTip": "crm\\database\\UserLogger.cs*",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserLogger.cs",
+              "RelativeToolTip": "crm\\database\\UserLogger.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T15:26:44.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T15:26:44.668Z"
             }
           ]
         }
