@@ -306,10 +306,18 @@ namespace GymCRM
             statisticsWindow.Show();
         }
 
-        private void AdminPanel(object sender, RoutedEventArgs e)
+        private void AdminPanelButton_Click(object sender, RoutedEventArgs e)
         {
-            AdminPanel adminPanelWindow = new AdminPanel();
-            adminPanelWindow.Show();
+            if (UserSession.IsAdmin()) 
+            {
+                AdminPanel adminPanelWindow = new AdminPanel();
+                adminPanelWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("У вас немає прав доступу до панелі адміністратора.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
+
     }
 }

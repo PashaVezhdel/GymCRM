@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using crm;
 using MySql.Data.MySqlClient;
 
 namespace GymCRM
@@ -43,13 +44,10 @@ namespace GymCRM
                         if (result != null)
                         {
                             string role = result.ToString();
+                            UserSession.SetUserRole(role);
                             MessageBox.Show($"Вхід успішний! Ваша роль: {role}", "GymCRM", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                            // Відкриваємо MainWindow перед закриттям поточного вікна
                             MainWindow mainWindow = new MainWindow();
                             mainWindow.Show();
-
-                            // Закриваємо вікно авторизації після того, як MainWindow відкрито
                             this.Close();
                         }
                         else
