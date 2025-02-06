@@ -105,5 +105,52 @@ namespace crm
             }
         }
 
+        private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsersDataGrid.SelectedItem is DataRowView selectedRow)
+            {
+                string username = selectedRow["username"].ToString();
+
+                string query = "DELETE FROM users WHERE username = @username";
+
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                if (dbConnection.Connect())
+                {
+                    try
+                    {
+                        using (MySqlConnection conn = new MySqlConnection(DatabaseConfig.ConnectionString))
+                        {
+                            conn.Open();
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@username", username);
+
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Аккаунт успішно видалений!");
+                                LoadUsersData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Не вдалося видалити аккаунт.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Помилка: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Не вдалося підключитися до бази даних.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Будь ласка, виберіть користувача для видалення.");
+            }
+        }
+
     }
 }
