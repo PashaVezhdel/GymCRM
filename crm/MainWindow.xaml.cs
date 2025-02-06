@@ -305,5 +305,11 @@ namespace GymCRM
             Statistics statisticsWindow = new Statistics();
             statisticsWindow.Show();
         }
+
+        private void AdminPanel(object sender, RoutedEventArgs e)
+        {
+            AdminPanel adminPanelWindow = new AdminPanel();
+            adminPanelWindow.Show();
+        }
     }
 }

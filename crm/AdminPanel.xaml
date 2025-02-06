@@ -1,0 +1,58 @@
+﻿<Window x:Class="crm.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:crm"
+        mc:Ignorable="d"
+        Title="Панель адміністратора" Height="500" Width="850" Background="#F4F4F4">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Керування акаунтами" FontSize="20" FontWeight="Bold" Foreground="#333"
+                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="True" IsReadOnly="True"
+                  Grid.Row="1" Height="200" Margin="0,0,0,10" Background="White"
+                  SelectionMode="Single" BorderBrush="#CCC" BorderThickness="1"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Логін" FontWeight="Bold"/>
+                <TextBox x:Name="UsernameTextBox" Width="180" Height="30" Padding="5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Пароль" FontWeight="Bold"/>
+                <PasswordBox x:Name="PasswordBox" Width="180" Height="30" Padding="5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Роль" FontWeight="Bold"/>
+                <ComboBox x:Name="RoleComboBox" Width="150" Height="30">
+                    <ComboBoxItem Content="ADMIN"/>
+                    <ComboBoxItem Content="EMPLOYEE"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,10">
+            <Button x:Name="CreateAccountButton" Content="Створити аккаунт" Margin="10"/>
+            <Button x:Name="SaveChangesButton" Content="Зберегти зміни" Margin="10"/>
+            <Button x:Name="DeleteAccountButton" Content="Видалити аккаунт" Margin="10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10"/>
+            <Button x:Name="BackupDBButton" Content="Бекапи БД" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
+

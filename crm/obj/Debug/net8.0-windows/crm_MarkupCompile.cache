@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\38098\Desktop\C#\crm\crm\App.xaml
-41264753316
+5-675681719
 
-9-469953490
+10-941194562
 206-273430697
-authorization.xaml;ClientRegistration.xaml;MainWindow.xaml;Statistics.xaml;
+AdminPanel.xaml;authorization.xaml;ClientRegistration.xaml;MainWindow.xaml;Statistics.xaml;
 
 False
 
