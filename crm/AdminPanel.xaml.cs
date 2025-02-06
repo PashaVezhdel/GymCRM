@@ -210,7 +210,7 @@ namespace crm
             }
         }
 
-        private void MonitorDBButton_Click(object sender, RoutedEventArgs e)
+        private void MonitorDB_Button_Click(object sender, RoutedEventArgs e)
         {
             DateTime startTime = DateTime.Now;
             DatabaseConnection dbConnection = new DatabaseConnection();

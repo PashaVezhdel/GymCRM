@@ -51,8 +51,8 @@
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10" Click="MonitorDBButton_Click"/>
-            <Button x:Name="BackupDBButton" Content="Бекапи БД" Margin="10"/>
+            <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10" Click="MonitorDB_Button_Click"/>
+            <Button x:Name="BackupDBButton" Content="Бекапи БД" Margin="10" />
         </StackPanel>
     </Grid>
 </Window>
