@@ -152,5 +152,63 @@ namespace crm
             }
         }
 
+        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsersDataGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Будь ласка, виберіть користувача для редагування.");
+                return;
+            }
+
+            DataRowView selectedRow = (DataRowView)UsersDataGrid.SelectedItem;
+            string username = UsernameTextBox.Text.Trim();
+            string password = PasswordBox.Password.Trim();
+            string role = ((ComboBoxItem)RoleComboBox.SelectedItem)?.Content.ToString();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(role))
+            {
+                MessageBox.Show("Будь ласка, заповніть всі поля!");
+                return;
+            }
+
+            string query = "UPDATE users SET username = @username, password = @password, role = @role WHERE username = @oldUsername";
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            if (dbConnection.Connect())
+            {
+                try
+                {
+                    using (MySqlConnection conn = new MySqlConnection(DatabaseConfig.ConnectionString))
+                    {
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@role", role);
+                        cmd.Parameters.AddWithValue("@oldUsername", selectedRow["username"].ToString());
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Зміни збережено!");
+                            LoadUsersData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Не вдалося зберегти зміни.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не вдалося підключитися до бази даних.");
+            }
+        }
+
     }
 }
