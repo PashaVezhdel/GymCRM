@@ -1,27 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using GymCRM;
+using MySql.Data.MySqlClient;
 
 namespace crm
 {
-    /// <summary>
-    /// Interaction logic for AdminPanel.xaml
-    /// </summary>
     public partial class AdminPanel : Window
     {
         public AdminPanel()
         {
             InitializeComponent();
+            LoadUsersData(); 
+        }
+
+        private void LoadUsersData()
+        {
+            using (MySqlConnection connection = new MySqlConnection(DatabaseConfig.ConnectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM users";
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+                    UsersDataGrid.ItemsSource = dataTable.DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при завантаженні даних: " + ex.Message, "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }
+
