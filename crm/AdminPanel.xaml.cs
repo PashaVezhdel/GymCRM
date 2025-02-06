@@ -210,5 +210,22 @@ namespace crm
             }
         }
 
+        private void MonitorDBButton_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime startTime = DateTime.Now;
+            DatabaseConnection dbConnection = new DatabaseConnection();
+
+            if (dbConnection.Connect())
+            {
+                DateTime endTime = DateTime.Now;
+                TimeSpan responseTime = endTime - startTime;
+                MessageBox.Show($"Підключення до бази даних успішне!\nЧас відгуку: {responseTime.TotalSeconds} секунд");
+            }
+            else
+            {
+                MessageBox.Show("Не вдалося підключитися до бази даних.");
+            }
+        }
+
     }
 }
