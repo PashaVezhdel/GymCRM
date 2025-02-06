@@ -2,21 +2,32 @@
 {
     internal class UserSession
     {
-        private static string role;
+        private static string _username;
+        private static string _role;
 
-        public static void SetUserRole(string userRole)
+        public static void SetUsername(string username)
         {
-            role = userRole;
+            _username = username;
         }
 
-        public static bool IsAdmin()
+        public static string GetUsername()
         {
-            return role == "ADMIN";
+            return _username;
+        }
+
+        public static void SetUserRole(string role)
+        {
+            _role = role;
         }
 
         public static string GetUserRole()
         {
-            return role;
+            return _role;
+        }
+
+        public static bool IsAdmin()
+        {
+            return _role == "ADMIN";
         }
     }
 }

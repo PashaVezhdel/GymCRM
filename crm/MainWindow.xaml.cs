@@ -69,13 +69,19 @@ namespace GymCRM
             }
         }
 
-
         private void Exit(object sender, RoutedEventArgs e)
         {
-            authorization authWindow = new authorization();
-            authWindow.Show();
+            string username = UserSession.GetUsername();
+
+            if (!string.IsNullOrEmpty(username))
+            {
+                new UserLogger(DatabaseConfig.ConnectionString).LogUserActivity(username, "LOGOUT");
+            }
+
+            new authorization().Show();
             this.Close();
         }
+
 
         private void Delete(object sender, RoutedEventArgs e)
         {

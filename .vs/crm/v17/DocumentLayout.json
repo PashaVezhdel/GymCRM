@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\C#\\crm\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\database\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\database\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\database\\userlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\database\\userlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserSession.cs",
+              "RelativeDocumentMoniker": "crm\\database\\UserSession.cs",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserSession.cs",
+              "RelativeToolTip": "crm\\database\\UserSession.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAywCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T15:31:02.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "crm\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs",
+              "RelativeToolTip": "crm\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T15:28:45.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "authorization.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
+              "RelativeDocumentMoniker": "crm\\authorization.xaml.cs",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\authorization.xaml.cs",
+              "RelativeToolTip": "crm\\authorization.xaml.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T15:27:43.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserLogger.cs",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserLogger.cs",
+              "RelativeDocumentMoniker": "crm\\database\\UserLogger.cs",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\database\\UserLogger.cs",
+              "RelativeToolTip": "crm\\database\\UserLogger.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvx8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T15:26:44.668Z",
+              "EditorCaption": ""
             }
           ]
         }

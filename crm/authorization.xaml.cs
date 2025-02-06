@@ -31,9 +31,7 @@ namespace GymCRM
                 using (MySqlConnection connection = new MySqlConnection(DatabaseConfig.ConnectionString))
                 {
                     connection.Open();
-
                     string query = "SELECT role FROM users WHERE username = @username AND password = @password";
-
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
@@ -44,10 +42,11 @@ namespace GymCRM
                         if (result != null)
                         {
                             string role = result.ToString();
+                            UserSession.SetUsername(username);
                             UserSession.SetUserRole(role);
-                            MessageBox.Show($"Вхід успішний! Ваша роль: {role}", "GymCRM", MessageBoxButton.OK, MessageBoxImage.Information);
-                            MainWindow mainWindow = new MainWindow();
-                            mainWindow.Show();
+                            new UserLogger(DatabaseConfig.ConnectionString).LogUserActivity(username, "LOGIN");
+
+                            new MainWindow().Show();
                             this.Close();
                         }
                         else
@@ -62,5 +61,7 @@ namespace GymCRM
                 MessageBox.Show($"Помилка при підключенні до бази даних: {ex.Message}", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+
     }
 }
