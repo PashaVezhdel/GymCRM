@@ -54,5 +54,56 @@ namespace crm
                 RoleComboBox.SelectedIndex = -1;
             }
         }
+
+        private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(UsernameTextBox.Text) || string.IsNullOrWhiteSpace(PasswordBox.Password) || RoleComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Будь ласка, заповніть всі поля.");
+                return;
+            }
+
+            string username = UsernameTextBox.Text;
+            string password = PasswordBox.Password;
+            string role = (RoleComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+
+            string query = "INSERT INTO users (username, password, role) VALUES (@username, @password, @role)";
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            if (dbConnection.Connect())
+            {
+                try
+                {
+                    using (MySqlConnection conn = new MySqlConnection(DatabaseConfig.ConnectionString))
+                    {
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@role", role);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Аккаунт успішно створений!");
+                            LoadUsersData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Не вдалося створити аккаунт.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не вдалося підключитися до бази даних.");
+            }
+        }
+
     }
 }
