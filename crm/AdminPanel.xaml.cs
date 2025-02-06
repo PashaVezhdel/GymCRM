@@ -227,5 +227,20 @@ namespace crm
             }
         }
 
+        private void RebootButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("net", "stop MySQL");
+                System.Threading.Thread.Sleep(2000);
+                System.Diagnostics.Process.Start("net", "start MySQL");
+                MessageBox.Show("БД успішно перезавантажена.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка при перезавантаженні БД: {ex.Message}");
+            }
+        }
+
     }
 }
