@@ -67,17 +67,31 @@ namespace crm
             string password = PasswordBox.Password;
             string role = (RoleComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
 
-            string query = "INSERT INTO users (username, password, role) VALUES (@username, @password, @role)";
-
-            DatabaseConnection dbConnection = new DatabaseConnection();
-            if (dbConnection.Connect())
+            try
             {
-                try
+                using (MySqlConnection conn = new MySqlConnection(DatabaseConfig.ConnectionString))
                 {
-                    using (MySqlConnection conn = new MySqlConnection(DatabaseConfig.ConnectionString))
+                    conn.Open();
+                    string getIdQuery = "SELECT MIN(t1.id + 1) AS next_id " +
+                                        "FROM users t1 " +
+                                        "LEFT JOIN users t2 ON t1.id + 1 = t2.id " +
+                                        "WHERE t2.id IS NULL";
+
+                    int nextId = 1;
+                    using (MySqlCommand getIdCommand = new MySqlCommand(getIdQuery, conn))
                     {
-                        conn.Open();
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        object result = getIdCommand.ExecuteScalar();
+                        if (result != DBNull.Value && result != null)
+                        {
+                            nextId = Convert.ToInt32(result);
+                        }
+                    }
+
+                    string query = "INSERT INTO users (id, username, password, role) VALUES (@id, @username, @password, @role)";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", nextId);
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
                         cmd.Parameters.AddWithValue("@role", role);
@@ -94,16 +108,13 @@ namespace crm
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Помилка: " + ex.Message);
-                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Не вдалося підключитися до бази даних.");
+                MessageBox.Show("Помилка: " + ex.Message);
             }
         }
+
 
         private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
