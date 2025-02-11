@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\C#\\crm\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\clientregistration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\clientregistration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\adminpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientRegistration.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml.cs",
-              "RelativeDocumentMoniker": "crm\\ClientRegistration.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml.cs*",
-              "RelativeToolTip": "crm\\ClientRegistration.xaml.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T15:35:53.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminPanel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AdminPanel.xaml.cs",
-              "RelativeDocumentMoniker": "crm\\AdminPanel.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AdminPanel.xaml.cs",
-              "RelativeToolTip": "crm\\AdminPanel.xaml.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T15:35:17.583Z",
-              "EditorCaption": ""
             }
           ]
         }
