@@ -37,7 +37,6 @@ namespace crm
                             }
                         }
 
-                        // Вставка з визначеним ID
                         string query = "INSERT INTO clients (id, full_name, date_of_birth, phone_number, last_payment_date, subscription_end_date, comments, balance) " +
                                        "VALUES (@id, @fullName, @dateOfBirth, @phoneNumber, @lastPaymentDate, @subscriptionEndDate, @comments, @balance)";
 
