@@ -5,7 +5,7 @@ CREATE TABLE clients (
    phone_number VARCHAR(20) NOT NULL,
    last_payment_date DATE,
    subscription_end_date DATE,
-   comments TEXT
+   comments TEXT,
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 );
 
