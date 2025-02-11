@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Statistics" Height="250" Width="300" ResizeMode="NoResize">
+        Title="Statistics" Height="250" Width="300" ResizeMode="NoResize" Icon="img/statistics.ico">
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Text="Статистика клієнтів" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>

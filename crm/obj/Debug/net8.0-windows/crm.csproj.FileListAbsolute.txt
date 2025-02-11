@@ -42,3 +42,9 @@ C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\Statistics.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\Statistics.baml
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\AdminPanel.g.cs
 C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\AdminPanel.baml
+C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\img\login.ico
+C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\crm_Content.g.cs
+C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\img\gym.ico
+C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\img\statistics.ico
+C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\img\user.ico
+C:\Users\38098\Desktop\C#\crm\crm\bin\Debug\net8.0-windows\img\admin.ico

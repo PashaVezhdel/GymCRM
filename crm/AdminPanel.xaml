@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Панель адміністратора" Height="500" Width="700" Background="#F4F4F4" ResizeMode="NoResize" WindowState="Normal">
+        Title="Панель адміністратора" Height="500" Width="700" Background="#F4F4F4" 
+        ResizeMode="NoResize" WindowState="Normal" Icon="img/admin.ico">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>

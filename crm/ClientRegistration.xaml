@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
         Title="Реєстрація клієнта" Height="450" Width="350"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Icon="img/user.ico">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
