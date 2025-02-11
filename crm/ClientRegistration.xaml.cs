@@ -12,7 +12,6 @@ namespace crm
             InitializeComponent();
         }
 
-
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             if (ValidateInput())
@@ -23,11 +22,28 @@ namespace crm
                     {
                         connection.Open();
 
-                        string query = "INSERT INTO clients (full_name, date_of_birth, phone_number, last_payment_date, subscription_end_date, comments, balance) " +
-                                       "VALUES (@fullName, @dateOfBirth, @phoneNumber, @lastPaymentDate, @subscriptionEndDate, @comments, @balance)";
+                        string getIdQuery = "SELECT MIN(t1.id + 1) AS next_id " +
+                                            "FROM clients t1 " +
+                                            "LEFT JOIN clients t2 ON t1.id + 1 = t2.id " +
+                                            "WHERE t2.id IS NULL";
+
+                        int nextId = 1; 
+                        using (MySqlCommand getIdCommand = new MySqlCommand(getIdQuery, connection))
+                        {
+                            object result = getIdCommand.ExecuteScalar();
+                            if (result != DBNull.Value && result != null)
+                            {
+                                nextId = Convert.ToInt32(result);
+                            }
+                        }
+
+                        // Вставка з визначеним ID
+                        string query = "INSERT INTO clients (id, full_name, date_of_birth, phone_number, last_payment_date, subscription_end_date, comments, balance) " +
+                                       "VALUES (@id, @fullName, @dateOfBirth, @phoneNumber, @lastPaymentDate, @subscriptionEndDate, @comments, @balance)";
 
                         using (MySqlCommand command = new MySqlCommand(query, connection))
                         {
+                            command.Parameters.AddWithValue("@id", nextId);
                             command.Parameters.AddWithValue("@fullName", FullNameTextBox.Text);
                             command.Parameters.AddWithValue("@dateOfBirth", DateOfBirthTextBox.Text);
                             command.Parameters.AddWithValue("@phoneNumber", PhoneNumberTextBox.Text);
@@ -59,6 +75,7 @@ namespace crm
                 }
             }
         }
+
 
         private bool ValidateInput()
         {
