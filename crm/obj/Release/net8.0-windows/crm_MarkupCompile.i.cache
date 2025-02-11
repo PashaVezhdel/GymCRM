@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\38098\Desktop\C#\crm\crm\obj\Debug\net8.0-windows\
+C:\Users\38098\Desktop\C#\crm\crm\obj\Release\net8.0-windows\
 crm
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\38098\Desktop\C#\crm\crm\App.xaml
 5-675681719
 
-14-889709795
+14-678247533
 206-273430697
 AdminPanel.xaml;authorization.xaml;ClientRegistration.xaml;MainWindow.xaml;Statistics.xaml;
 
