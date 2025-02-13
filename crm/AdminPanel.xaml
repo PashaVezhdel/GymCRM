@@ -53,7 +53,8 @@
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10" Click="MonitorDB_Button_Click"/>
-            <Button x:Name="RebootButton" Content="Перезавантажити БД" Margin="10" Click="RebootButton_Click" />
+            <Button x:Name="RebootButton" Content="Перезавантажити служби БД" Margin="10" Click="RebootButton_Click" />
+            <Button x:Name="AuthLogsButton" Content="Логи авторизації" Margin="10" Click="AuthLogsButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

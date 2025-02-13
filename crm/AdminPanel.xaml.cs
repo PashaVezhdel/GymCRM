@@ -253,5 +253,10 @@ namespace crm
             }
         }
 
+        private void AuthLogsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Logs logsWindow = new Logs();
+            logsWindow.Show();
+        }
     }
 }

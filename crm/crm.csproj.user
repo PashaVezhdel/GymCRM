@@ -13,6 +13,9 @@
     <Compile Update="ClientRegistration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Logs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ClientRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Logs.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

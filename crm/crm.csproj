@@ -12,6 +12,7 @@
     <None Remove="img\admin.ico" />
     <None Remove="img\gym.ico" />
     <None Remove="img\login.ico" />
+    <None Remove="img\logs.ico" />
     <None Remove="img\statistics.ico" />
     <None Remove="img\User.ico" />
   </ItemGroup>
@@ -24,6 +25,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="img\login.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\logs.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="img\statistics.ico">

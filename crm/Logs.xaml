@@ -1,0 +1,14 @@
+﻿<Window x:Class="crm.Logs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:crm"
+        mc:Ignorable="d"
+        Title="Логи авторизації" Height="300" Width="306"
+        ResizeMode="NoResize" WindowStyle="SingleBorderWindow"
+        Icon="img/logs.ico">
+    <Grid>
+        <DataGrid Name="logsDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="True" />
+    </Grid>
+</Window>
