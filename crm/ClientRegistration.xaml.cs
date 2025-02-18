@@ -7,9 +7,12 @@ namespace crm
 {
     public partial class ClientRegistration : Window
     {
-        public ClientRegistration()
+        private MainWindow mainWindow;
+
+        public ClientRegistration(MainWindow mainWindow)
         {
             InitializeComponent();
+            this.mainWindow = mainWindow; 
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
@@ -27,7 +30,7 @@ namespace crm
                                             "LEFT JOIN clients t2 ON t1.id + 1 = t2.id " +
                                             "WHERE t2.id IS NULL";
 
-                        int nextId = 1; 
+                        int nextId = 1;
                         using (MySqlCommand getIdCommand = new MySqlCommand(getIdQuery, connection))
                         {
                             object result = getIdCommand.ExecuteScalar();
@@ -66,6 +69,9 @@ namespace crm
                         }
                     }
                     MessageBox.Show("Клієнта успішно зареєстровано!");
+
+                    mainWindow.LoadClientsData();  
+
                     this.Close();
                 }
                 catch (Exception ex)
@@ -74,7 +80,6 @@ namespace crm
                 }
             }
         }
-
 
         private bool ValidateInput()
         {
@@ -117,7 +122,7 @@ namespace crm
                 return false;
             }
 
-            string balanceText = BalanceTextBox.Text.Replace(',', '.');  
+            string balanceText = BalanceTextBox.Text.Replace(',', '.');
             decimal balance;
             if (!decimal.TryParse(balanceText, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out balance))
             {

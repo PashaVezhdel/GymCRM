@@ -33,10 +33,10 @@ namespace GymCRM
             }
         }
 
-        private void LoadClientsData()
+        public void LoadClientsData()
         {
             string connectionString = DatabaseConfig.ConnectionString;
-            string query = "SELECT * FROM Clients";
+            string query = "SELECT * FROM clients"; // Оновлюємо весь список клієнтів
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -47,6 +47,7 @@ namespace GymCRM
                     DataTable clientsDataTable = new DataTable();
                     dataAdapter.Fill(clientsDataTable);
 
+                    // Оновлюємо ItemsSource DataGrid
                     ClientsDataGrid.ItemsSource = clientsDataTable.DefaultView;
                 }
                 catch (Exception ex)
@@ -55,6 +56,7 @@ namespace GymCRM
                 }
             }
         }
+
 
         private void ClientsDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
@@ -313,8 +315,9 @@ namespace GymCRM
 
         private void Button_Registration(object sender, RoutedEventArgs e)
         {
-            ClientRegistration registrationWindow = new ClientRegistration();
+            ClientRegistration registrationWindow = new ClientRegistration(this);
             registrationWindow.Show();
+
         }
 
         private void Statistics(object sender, RoutedEventArgs e)
