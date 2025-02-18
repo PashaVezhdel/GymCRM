@@ -7,28 +7,8 @@
       "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\clientregistration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\clientregistration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\clientregistration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\clientregistration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\logs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\logs.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\logs.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\logs.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,82 +32,22 @@
               "RelativeDocumentMoniker": "crm\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml.cs*",
               "RelativeToolTip": "crm\\MainWindow.xaml.cs*",
-              "ViewState": "AgIAADIBAAAAAAAAAIAwwD8BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAADwv4gAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:42:54.798Z",
+              "WhenOpened": "2025-02-18T18:58:50.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
               "RelativeDocumentMoniker": "crm\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
               "RelativeToolTip": "crm\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T18:41:16.953Z",
+              "WhenOpened": "2025-02-18T18:58:36.402Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClientRegistration.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml.cs",
-              "RelativeDocumentMoniker": "crm\\ClientRegistration.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml.cs*",
-              "RelativeToolTip": "crm\\ClientRegistration.xaml.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:40:48.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientRegistration.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml",
-              "RelativeDocumentMoniker": "crm\\ClientRegistration.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\ClientRegistration.xaml",
-              "RelativeToolTip": "crm\\ClientRegistration.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T18:40:02.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AdminPanel.xaml",
-              "RelativeDocumentMoniker": "crm\\AdminPanel.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\AdminPanel.xaml",
-              "RelativeToolTip": "crm\\AdminPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-13T14:44:23.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Logs.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\Logs.xaml.cs",
-              "RelativeDocumentMoniker": "crm\\Logs.xaml.cs",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\Logs.xaml.cs",
-              "RelativeToolTip": "crm\\Logs.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwA4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:38:55.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Logs.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\Logs.xaml",
-              "RelativeDocumentMoniker": "crm\\Logs.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\Logs.xaml",
-              "RelativeToolTip": "crm\\Logs.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-13T14:38:12.054Z"
             }
           ]
         }

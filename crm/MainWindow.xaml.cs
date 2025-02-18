@@ -36,7 +36,7 @@ namespace GymCRM
         public void LoadClientsData()
         {
             string connectionString = DatabaseConfig.ConnectionString;
-            string query = "SELECT * FROM clients"; // Оновлюємо весь список клієнтів
+            string query = "SELECT * FROM clients"; 
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -47,7 +47,6 @@ namespace GymCRM
                     DataTable clientsDataTable = new DataTable();
                     dataAdapter.Fill(clientsDataTable);
 
-                    // Оновлюємо ItemsSource DataGrid
                     ClientsDataGrid.ItemsSource = clientsDataTable.DefaultView;
                 }
                 catch (Exception ex)
@@ -135,6 +134,7 @@ namespace GymCRM
                 SubscriptionEndTextBox.Clear();
                 BalanceTextBox.Clear();
                 CommentTextBox.Clear();
+                CreationDateTextBox.Clear();
 
             }
             catch (Exception ex)
