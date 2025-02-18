@@ -10,6 +10,7 @@ namespace crm
         public Statistics()
         {
             InitializeComponent();
+            LoadStatistics(); 
         }
 
         private bool Connect(out MySqlConnection connection)
@@ -55,7 +56,7 @@ namespace crm
             return Convert.ToInt32(command.ExecuteScalar());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadStatistics()
         {
             MySqlConnection connection;
 
@@ -63,17 +64,10 @@ namespace crm
             {
                 try
                 {
-                    int totalClients = GetTotalClients(connection);
-                    decimal totalBalance = GetTotalBalance(connection);
-                    decimal averageBalance = GetAverageBalance(connection);
-                    int zeroBalanceCount = GetZeroBalanceCount(connection);
-
-                    TotalClients.Text = totalClients.ToString();
-                    TotalBalance.Text = totalBalance.ToString("C"); 
-                    AverageBalance.Text = averageBalance.ToString("C");
-                    ZeroBalanceCount.Text = zeroBalanceCount.ToString();
-
-                    MessageBox.Show("Статистика успішно завантажена!", "Успіх", MessageBoxButton.OK, MessageBoxImage.Information);
+                    TotalClients.Text = GetTotalClients(connection).ToString();
+                    TotalBalance.Text = GetTotalBalance(connection).ToString("C");
+                    AverageBalance.Text = GetAverageBalance(connection).ToString("C");
+                    ZeroBalanceCount.Text = GetZeroBalanceCount(connection).ToString();
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +82,12 @@ namespace crm
             {
                 MessageBox.Show("Не вдалося підключитися до бази даних.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoadStatistics();
+            MessageBox.Show("Статистика успішно завантажена!", "Успіх", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Statistics" Height="250" Width="300" ResizeMode="NoResize" Icon="img/statistics.ico">
+        Title="Statistics" Height="200" Width="350" ResizeMode="NoResize" Icon="img/statistics.ico">
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Text="Статистика клієнтів" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
@@ -26,11 +26,10 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Кількість клієнтів з 0,0 балансом:" VerticalAlignment="Center" Width="180"/>
+                <TextBlock Text="Кількість клієнтів з 0 балансом:" VerticalAlignment="Center" Width="180"/>
                 <TextBlock Name="ZeroBalanceCount" VerticalAlignment="Center" Width="100" />
             </StackPanel>
 
-            <Button Content="Завантажити статистику" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>
