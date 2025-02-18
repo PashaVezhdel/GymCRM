@@ -83,11 +83,5 @@ namespace crm
                 MessageBox.Show("Не вдалося підключитися до бази даних.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LoadStatistics();
-            MessageBox.Show("Статистика успішно завантажена!", "Успіх", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
     }
 }
