@@ -5,48 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Реєстрація клієнта" Height="450" Width="350"
-        WindowStartupLocation="CenterScreen" Icon="img/user.ico">
+        Title="Реєстрація клієнта" Height="570" Width="350"
+        WindowStartupLocation="CenterScreen" Icon="img/user.ico" ResizeMode="NoResize">
 
     <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <Label Content="ПІБ:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="FullNameTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="ПІБ:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Name="FullNameTextBox" Margin="5" Height="25"/>
+            <Label Content="Дата народження:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="DateOfBirthTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Дата народження:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Name="DateOfBirthTextBox" Margin="5" Height="25"/>
+            <Label Content="Телефон:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="PhoneNumberTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="2" Grid.Column="0" Content="Телефон:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="PhoneNumberTextBox" Margin="5" Height="25"/>
+            <Label Content="Остання оплата:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="LastPaymentDateTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="3" Grid.Column="0" Content="Остання оплата:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Name="LastPaymentDateTextBox" Margin="5" Height="25"/>
+            <Label Content="Кінець підписки:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="SubscriptionEndDateTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="4" Grid.Column="0" Content="Кінець підписки:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Name="SubscriptionEndDateTextBox" Margin="5" Height="25"/>
+            <Label Content="Баланс:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="BalanceTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="5" Grid.Column="0" Content="Баланс:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Name="BalanceTextBox" Margin="5" Height="25"/>
+            <Label Content="Коментар:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
+            <TextBox Name="CommentTextBox" Height="75" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" Margin="0,5"/>
 
-        <Label Grid.Row="6" Grid.Column="0" Content="Коментар:" VerticalAlignment="Center" Height="25" Margin="0,5"/>
-        <TextBox Grid.Row="6" Grid.Column="1" Name="CommentTextBox" Margin="5" Height="75" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
-
-        <Button Grid.Row="7" Grid.Column="1" Name="RegisterButton" Content="Зареєструвати" Width="120" Height="30" Margin="5" HorizontalAlignment="Left" Click="RegisterButton_Click"/>
+            <StackPanel HorizontalAlignment="Center" Margin="5">
+                <Button Name="RegisterButton" Content="Зареєструвати" Width="120" Height="30" HorizontalAlignment="Center" Click="RegisterButton_Click"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
