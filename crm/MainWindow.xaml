@@ -83,6 +83,7 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
                             <Button Content="Зберегти зміни" Width="150" Margin="5" Height="40" Click="Save"/>
                             <Button Content="Видалити клієнта" Width="150" Margin="5" Height="40" Click="Delete" />
+                            <Button Content="Закрити" Width="150" Margin="5" Height="40" Click="CloseDetailsPanel"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>

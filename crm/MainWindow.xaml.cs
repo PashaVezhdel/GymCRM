@@ -358,5 +358,11 @@ namespace GymCRM
             }
         }
 
+        private void CloseDetailsPanel(object sender, RoutedEventArgs e)
+        {
+            ClientDetailsPanel.Visibility = Visibility.Collapsed; 
+            ClientsDataGrid.SelectedItem = null; 
+        }
+
     }
 }
