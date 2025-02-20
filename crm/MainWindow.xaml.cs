@@ -21,6 +21,7 @@ namespace GymCRM
             LoadClientsData();
             DataContext = this;
             this.Closing += MainWindow_Closing;
+            ClientDetailsPanel.Visibility = Visibility.Collapsed;
         }
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -56,7 +57,6 @@ namespace GymCRM
             }
         }
 
-
         private void ClientsDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (ClientsDataGrid.SelectedItem is DataRowView rowView)
@@ -64,7 +64,6 @@ namespace GymCRM
                 SelectedClient = rowView.Row;
 
                 FullNameTextBox.Text = SelectedClient["full_name"].ToString();
-
                 if (SelectedClient["date_of_birth"] != DBNull.Value)
                     DateOfBirthTextBox.Text = ((DateTime)SelectedClient["date_of_birth"]).ToString("yyyy/MM/dd", CultureInfo.InvariantCulture);
                 if (SelectedClient["last_payment_date"] != DBNull.Value)
@@ -78,8 +77,28 @@ namespace GymCRM
                     PhoneNumberTextBox.Text = SelectedClient["phone_number"].ToString();
 
                 CommentTextBox.Text = SelectedClient["comments"].ToString();
+
+                ClientDetailsPanel.Visibility = Visibility.Visible;
+                ClientsDataGrid.Height = 800; 
+            }
+            else
+            {
+                SelectedClient = null;
+
+                FullNameTextBox.Clear();
+                DateOfBirthTextBox.Clear();
+                PhoneNumberTextBox.Clear();
+                LastPaymentTextBox.Clear();
+                SubscriptionEndTextBox.Clear();
+                BalanceTextBox.Clear();
+                CommentTextBox.Clear();
+                CreationDateTextBox.Clear();
+
+                ClientDetailsPanel.Visibility = Visibility.Collapsed;
+                ClientsDataGrid.Height = Double.NaN; 
             }
         }
+
 
         private void Exit(object sender, RoutedEventArgs e)
         {

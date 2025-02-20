@@ -24,71 +24,69 @@
                 <Button Width="120" VerticalAlignment="Center" Margin="15,0,0,0" Content="Шукати" ToolTip="Натисніть для пошуку клієнта за введеними даними" Click="Search"/>
             </StackPanel>
 
-
             <Button Grid.Column="4" Content="Статистика" Height="40" Click="Statistics" />
             <Button Grid.Column="5" Content="Оновити дані" Height="40" Click="UpdateList"/>
             <Button Grid.Column="6" Content="Вийти" Height="40" Click="Exit"/>
         </Grid>
 
-        <DataGrid x:Name="ClientsDataGrid" Margin="10,60,10,300" 
-          AutoGenerateColumns="False" IsReadOnly="True" 
-          SelectionChanged="ClientsDataGrid_SelectionChanged">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ПІБ" Binding="{Binding full_name}" />
-                <DataGridTextColumn Header="Дата народження" Binding="{Binding date_of_birth}" />
-                <DataGridTextColumn Header="Номер телефону" Binding="{Binding phone_number}" />
-                <DataGridTextColumn Header="Останній платіж" Binding="{Binding last_payment_date}" />
-                <DataGridTextColumn Header="Кінець підписки" Binding="{Binding subscription_end_date}" />
-                <DataGridTextColumn Header="Коментарі" Binding="{Binding comments}" />
-                <DataGridTextColumn Header="Дата створення" Binding="{Binding created_at}" />
-                <DataGridTextColumn Header="Баланс" Binding="{Binding balance}" />
-            </DataGrid.Columns>
-        </DataGrid>
+        <Grid Margin="10,60,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
+            <DataGrid x:Name="ClientsDataGrid"
+                      AutoGenerateColumns="False" IsReadOnly="True" 
+                      SelectionChanged="ClientsDataGrid_SelectionChanged" 
+                      Grid.Row="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ПІБ" Binding="{Binding full_name}" />
+                    <DataGridTextColumn Header="Дата народження" Binding="{Binding date_of_birth}" />
+                    <DataGridTextColumn Header="Номер телефону" Binding="{Binding phone_number}" />
+                    <DataGridTextColumn Header="Останній платіж" Binding="{Binding last_payment_date}" />
+                    <DataGridTextColumn Header="Кінець підписки" Binding="{Binding subscription_end_date}" />
+                    <DataGridTextColumn Header="Коментарі" Binding="{Binding comments}" />
+                    <DataGridTextColumn Header="Дата створення" Binding="{Binding created_at}" />
+                    <DataGridTextColumn Header="Баланс" Binding="{Binding balance}" />
+                </DataGrid.Columns>
+            </DataGrid>
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10" VerticalAlignment="Bottom" Height="250">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="3*" />
-                </Grid.ColumnDefinitions>
+            <ScrollViewer x:Name="ClientDetailsPanel" Visibility="Collapsed"
+                          VerticalScrollBarVisibility="Auto" Margin="10" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
 
-                
-                <StackPanel Grid.Column="0" Margin="10">
-
-                    <TextBlock Text="Інформація про клієнта" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-                    
-                    <TextBlock Text="ПІБ:"/>
-                    <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть повне ім'я клієнта" />
-
-                    <TextBlock Text="Дата народження:"/>
-                    <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження клієнта (формат: РРРР/ММ/ДД)" />
-
-                    <TextBlock Text="Номер телефону:"/>
-                    <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону клієнта (формат: +380XXXXXXXXX)" />
-
-                    <TextBlock Text="Останній платіж:"/>
-                    <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть дату останнього платежу клієнта (формат: РРРР/ММ/ДД)" />
-
-                    <TextBlock Text="Закінчення підписки:"/>
-                    <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Введіть дату закінчення підписки клієнта (формат: РРРР/ММ/ДД)" />
-
-                    <TextBlock Text="Дата створення:"/>
-                    <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення облікового запису" IsReadOnly="True"/>
-
-                    <TextBlock Text="Баланс:"/>
-                    <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Введіть поточний баланс клієнта (грн)" />
-                </StackPanel>
-
-                <StackPanel Grid.Column="1" Margin="10">
-                    <TextBlock Text="Коментар:" Margin="0,0,0,5"/>
-                    <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                        <Button Content="Зберегти зміни" Width="150" Margin="5" Height="40" Click="Save"/>
-                        <Button Content="Видалити клієнта" Width="150" Margin="5" Height="40" Click="Delete" />
+                    <StackPanel Grid.Column="0" Margin="10">
+                        <TextBlock Text="Інформація про клієнта" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                        <TextBlock Text="ПІБ:"/>
+                        <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть повне ім'я клієнта" />
+                        <TextBlock Text="Дата народження:"/>
+                        <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження клієнта" />
+                        <TextBlock Text="Номер телефону:"/>
+                        <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону клієнта" />
+                        <TextBlock Text="Останній платіж:"/>
+                        <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть дату останнього платежу клієнта" />
+                        <TextBlock Text="Закінчення підписки:"/>
+                        <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Введіть дату закінчення підписки клієнта" />
+                        <TextBlock Text="Дата створення:"/>
+                        <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення облікового запису" IsReadOnly="True"/>
+                        <TextBlock Text="Баланс:"/>
+                        <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Введіть поточний баланс клієнта" />
                     </StackPanel>
-                </StackPanel>
-            </Grid>
-        </ScrollViewer>
+
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <TextBlock Text="Коментар:" Margin="0,0,0,5"/>
+                        <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                            <Button Content="Зберегти зміни" Width="150" Margin="5" Height="40" Click="Save"/>
+                            <Button Content="Видалити клієнта" Width="150" Margin="5" Height="40" Click="Delete" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
