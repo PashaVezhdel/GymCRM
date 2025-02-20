@@ -31,9 +31,20 @@
         </Grid>
 
         <DataGrid x:Name="ClientsDataGrid" Margin="10,60,10,300" 
-                  AutoGenerateColumns="True" IsReadOnly="True"
-                  SelectionChanged="ClientsDataGrid_SelectionChanged">
+          AutoGenerateColumns="False" IsReadOnly="True" 
+          SelectionChanged="ClientsDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ПІБ" Binding="{Binding full_name}" />
+                <DataGridTextColumn Header="Дата народження" Binding="{Binding date_of_birth}" />
+                <DataGridTextColumn Header="Номер телефону" Binding="{Binding phone_number}" />
+                <DataGridTextColumn Header="Останній платіж" Binding="{Binding last_payment_date}" />
+                <DataGridTextColumn Header="Кінець підписки" Binding="{Binding subscription_end_date}" />
+                <DataGridTextColumn Header="Коментарі" Binding="{Binding comments}" />
+                <DataGridTextColumn Header="Дата створення" Binding="{Binding created_at}" />
+                <DataGridTextColumn Header="Баланс" Binding="{Binding balance}" />
+            </DataGrid.Columns>
         </DataGrid>
+
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10" VerticalAlignment="Bottom" Height="250">
             <Grid>
