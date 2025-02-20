@@ -11,6 +11,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/admin.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/gym.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/login.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/logs.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/statistics.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/user.ico")]
 

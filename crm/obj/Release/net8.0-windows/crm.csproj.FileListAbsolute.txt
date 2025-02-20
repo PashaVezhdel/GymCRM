@@ -48,3 +48,6 @@ C:\Users\38098\Desktop\C#\crm\crm\bin\Release\net8.0-windows\img\login.ico
 C:\Users\38098\Desktop\C#\crm\crm\bin\Release\net8.0-windows\img\statistics.ico
 C:\Users\38098\Desktop\C#\crm\crm\bin\Release\net8.0-windows\img\user.ico
 C:\Users\38098\Desktop\C#\crm\crm\obj\Release\net8.0-windows\crm_Content.g.cs
+C:\Users\38098\Desktop\C#\crm\crm\bin\Release\net8.0-windows\img\logs.ico
+C:\Users\38098\Desktop\C#\crm\crm\obj\Release\net8.0-windows\Logs.g.cs
+C:\Users\38098\Desktop\C#\crm\crm\obj\Release\net8.0-windows\Logs.baml
