@@ -18,11 +18,12 @@
             <Button Grid.Column="0" Content="Новий клієнт" Height="40" Click="Button_Registration" />
             <Button Grid.Column="1" Content="Панель адміністратора" Height="40" Click="AdminPanelButton_Click" />
 
-            <TextBox x:Name="SearchTextBox" Grid.Column="2" Width="200" VerticalAlignment="Center" Margin="10,0" 
-                     ToolTip="Введіть текст для пошуку" />
+            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0" Orientation="Horizontal">
+                <TextBlock Text="Пошук:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="SearchTextBox" Width="200" VerticalAlignment="Center" ToolTip="Введіть ПІБ або номер телефону клієнта для пошуку" />
+                <Button Width="120" VerticalAlignment="Center" Margin="5,0" Content="Шукати" ToolTip="Натисніть для пошуку клієнта за введеними даними" Click="Search"/>
+            </StackPanel>
 
-            <Button Grid.Column="3" Width="120" VerticalAlignment="Center" Margin="5,0"
-                    Content="Пошук" ToolTip="Натисніть, щоб знайти клієнта" Click="Search"/>
             <Button Grid.Column="4" Content="Статистика" Height="40" Click="Statistics" />
             <Button Grid.Column="5" Content="Оновити дані" Height="40" Click="UpdateList"/>
             <Button Grid.Column="6" Content="Вийти" Height="40" Click="Exit"/>

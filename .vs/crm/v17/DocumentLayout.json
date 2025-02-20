@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\C#\\crm\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\c#\\crm\\crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "crm\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\38098\\Desktop\\C#\\crm\\crm\\MainWindow.xaml",
+              "RelativeToolTip": "crm\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-20T17:38:17.805Z",
+              "EditorCaption": ""
             }
           ]
         }
