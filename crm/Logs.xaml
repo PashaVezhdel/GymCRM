@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Логи авторизації" Height="300" Width="306"
+        Title="Логи авторизації" Height="300" Width="400"
         ResizeMode="NoResize" WindowStyle="SingleBorderWindow"
         Icon="img/logs.ico">
     <Grid>
-        <DataGrid Name="logsDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="True" />
+        <DataGrid Name="logsDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Користувач" Binding="{Binding username}" Width="*" />
+                <DataGridTextColumn Header="Дія" Binding="{Binding action}" Width="*" />
+                <DataGridTextColumn Header="Час" Binding="{Binding timestamp, StringFormat='yyyy/MM/dd HH:mm:ss'}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
