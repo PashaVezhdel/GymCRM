@@ -52,42 +52,45 @@
             </DataGrid>
 
             <ScrollViewer x:Name="ClientDetailsPanel" Visibility="Collapsed"
-                          VerticalScrollBarVisibility="Auto" Margin="10" Grid.Row="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
+              VerticalScrollBarVisibility="Auto" Margin="10" Grid.Row="1">
+                <Border BorderBrush="Black" BorderThickness="2" Margin="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="0" Margin="10">
-                        <TextBlock Text="Інформація про клієнта" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-                        <TextBlock Text="ПІБ:"/>
-                        <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть повне ім'я клієнта" />
-                        <TextBlock Text="Дата народження:"/>
-                        <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження клієнта" />
-                        <TextBlock Text="Номер телефону:"/>
-                        <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону клієнта" />
-                        <TextBlock Text="Останній платіж:"/>
-                        <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть дату останнього платежу клієнта" />
-                        <TextBlock Text="Закінчення підписки:"/>
-                        <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Введіть дату закінчення підписки клієнта" />
-                        <TextBlock Text="Дата створення:"/>
-                        <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення облікового запису" IsReadOnly="True"/>
-                        <TextBlock Text="Баланс:"/>
-                        <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Введіть поточний баланс клієнта" />
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="1" Margin="10">
-                        <TextBlock Text="Коментар:" Margin="0,0,0,5"/>
-                        <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Коментар" />
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                            <Button Content="Зберегти зміни" Width="150" Margin="5" Height="40" Click="Save"/>
-                            <Button Content="Видалити клієнта" Width="150" Margin="5" Height="40" Click="Delete" />
-                            <Button Content="Закрити" Width="150" Margin="5" Height="40" Click="CloseDetailsPanel"/>
+                        <StackPanel Grid.Column="0" Margin="10">
+                            <TextBlock Text="Інформація про клієнта" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                            <TextBlock Text="ПІБ:"/>
+                            <TextBox x:Name="FullNameTextBox" Margin="5" ToolTip="Введіть повне ім'я клієнта" />
+                            <TextBlock Text="Дата народження:"/>
+                            <TextBox x:Name="DateOfBirthTextBox" Margin="5" ToolTip="Введіть дату народження клієнта" />
+                            <TextBlock Text="Номер телефону:"/>
+                            <TextBox x:Name="PhoneNumberTextBox" Margin="5" ToolTip="Введіть номер телефону клієнта" />
+                            <TextBlock Text="Останній платіж:"/>
+                            <TextBox x:Name="LastPaymentTextBox" Margin="5" ToolTip="Введіть дату останнього платежу клієнта" />
+                            <TextBlock Text="Закінчення підписки:"/>
+                            <TextBox x:Name="SubscriptionEndTextBox" Margin="5" ToolTip="Введіть дату закінчення підписки клієнта" />
+                            <TextBlock Text="Дата створення:"/>
+                            <TextBox x:Name="CreationDateTextBox" Margin="5" ToolTip="Дата створення облікового запису" IsReadOnly="True"/>
+                            <TextBlock Text="Баланс:"/>
+                            <TextBox x:Name="BalanceTextBox" Margin="5" ToolTip="Введіть поточний баланс клієнта" />
                         </StackPanel>
-                    </StackPanel>
-                </Grid>
+
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <TextBlock Text="Коментар:" Margin="0,0,0,5"/>
+                            <TextBox x:Name="CommentTextBox" Margin="5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Введіть коментар за потреби" />
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                <Button Content="Зберегти зміни" Width="150" Margin="5" Height="40" Click="Save"/>
+                                <Button Content="Видалити клієнта" Width="150" Margin="5" Height="40" Click="Delete"/>
+                                <Button Content="Закрити" Width="150" Margin="5" Height="40" Click="CloseDetailsPanel"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
             </ScrollViewer>
+
         </Grid>
     </Grid>
 </Window>
