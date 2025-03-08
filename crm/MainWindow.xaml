@@ -38,7 +38,7 @@
             <DataGrid x:Name="ClientsDataGrid"
                       AutoGenerateColumns="False" IsReadOnly="True" 
                       SelectionChanged="ClientsDataGrid_SelectionChanged" 
-                      Grid.Row="0">
+                      Grid.Row="0" Margin="0,8,0,8">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ПІБ" Binding="{Binding full_name}" />
                     <DataGridTextColumn Header="Дата народження" Binding="{Binding date_of_birth}" />

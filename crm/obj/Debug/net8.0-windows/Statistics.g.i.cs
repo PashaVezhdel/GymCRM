@@ -85,7 +85,7 @@ namespace crm {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/crm;V1.0.0.0;component/statistics.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/crm;component/statistics.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Statistics.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

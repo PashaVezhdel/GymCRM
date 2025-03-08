@@ -68,7 +68,7 @@ namespace GymCRM {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/crm;V1.0.0.0;component/authorization.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/crm;component/authorization.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\authorization.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

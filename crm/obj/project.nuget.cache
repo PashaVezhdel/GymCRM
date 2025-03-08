@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RrWiKOLTd0o=",
+  "dgSpecHash": "S7zIqAlQC1Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\38098\\Desktop\\Проекти\\crm\\crm\\crm.csproj",
+  "projectFilePath": "C:\\Users\\38098\\Desktop\\UzhNU\\Курсова робота 2025\\crm\\crm\\crm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\38098\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\38098\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

@@ -133,7 +133,7 @@ namespace crm {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/crm;V1.0.0.0;component/adminpanel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/crm;component/adminpanel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AdminPanel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

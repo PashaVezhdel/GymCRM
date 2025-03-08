@@ -117,7 +117,7 @@ namespace crm {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/crm;V1.0.0.0;component/clientregistration.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/crm;component/clientregistration.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ClientRegistration.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
