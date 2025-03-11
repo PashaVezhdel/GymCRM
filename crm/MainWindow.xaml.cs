@@ -364,5 +364,30 @@ namespace GymCRM
             ClientsDataGrid.SelectedItem = null; 
         }
 
+        private void ShowSoftwareInfo(object sender, RoutedEventArgs e)
+        {
+            string softwareInfo =
+                "Тема курсової роботи:\n" +
+                "«Розробка інформаційної системи для обліку клієнтів спортзалу (десктопний додаток)»\n\n" +
+
+                "Розробник: Pavlo Vezhdel\n" +
+                "Курс: 3 курс, КН-ІНФ\n\n" +
+
+                "Стек технологій:\n" +
+                "  - Мова програмування: C#\n" +
+                "  - База даних: MySQL\n" +
+                "  - Використані фреймворки: WPF (Windows Presentation Foundation)\n" +
+                "  - Бібліотеки: My.Sql.Data (для роботи з базою даних)\n\n" +
+
+                "Посилання на GitHub: " +
+                "https://github.com/PashaVezhdel/GymCRM/tree/master\n\n" +
+
+                "Версія: 1.0\n" +
+                "Дата релізу: 2025\n\n";
+
+            MessageBox.Show(softwareInfo, "Інформація про ПЗ", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
     }
 }
