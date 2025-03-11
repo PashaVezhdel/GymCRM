@@ -7,8 +7,54 @@
         mc:Ignorable="d"
         Title="Логи авторизації" Height="300" Width="400"
         ResizeMode="NoResize" WindowStyle="SingleBorderWindow"
-        Icon="img/logs.ico">
-    <Grid>
+        Icon="img/logs.ico" FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="#F0F4F8"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="BorderBrush" Value="#CCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CellStyle">
+                <Setter.Value>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="5"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#F0F4F8"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#222222"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Setter Property="Background" Value="White"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="DataGridRow.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#F4F4F4" Duration="0:0:0.2" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="DataGridRow.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White" Duration="0:0:0.2" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Background="#F0F4F8">
         <DataGrid Name="logsDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Користувач" Binding="{Binding username}" Width="*" />

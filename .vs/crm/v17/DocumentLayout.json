@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\uzhnu\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\uzhnu\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\statistics.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\statistics.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\uzhnu\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\clientregistration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\clientregistration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\uzhnu\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|c:\\users\\38098\\desktop\\uzhnu\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{17FCC557-3241-4DD1-8699-6FC2394B2E42}|crm\\crm.csproj|solutionrelative:crm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,70 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\AdminPanel.xaml",
-              "RelativeDocumentMoniker": "crm\\AdminPanel.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\AdminPanel.xaml",
-              "RelativeToolTip": "crm\\AdminPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T12:33:27.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClientRegistration.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\ClientRegistration.xaml",
-              "RelativeDocumentMoniker": "crm\\ClientRegistration.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\ClientRegistration.xaml",
-              "RelativeToolTip": "crm\\ClientRegistration.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T12:30:29.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Statistics.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\Statistics.xaml",
-              "RelativeDocumentMoniker": "crm\\Statistics.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\Statistics.xaml",
-              "RelativeToolTip": "crm\\Statistics.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T12:29:32.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "authorization.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\authorization.xaml",
-              "RelativeDocumentMoniker": "crm\\authorization.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\authorization.xaml",
-              "RelativeToolTip": "crm\\authorization.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T12:28:33.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "crm\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\38098\\Desktop\\UzhNU\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430 \u0440\u043E\u0431\u043E\u0442\u0430 2025\\crm\\crm\\MainWindow.xaml",
-              "RelativeToolTip": "crm\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-08T18:57:16.518Z"
             }
           ]
         }

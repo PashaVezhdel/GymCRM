@@ -3,6 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="GymCRM" Height="300" Width="300" Background="#F0F4F8"
         ResizeMode="NoResize" Icon="img/login.ico">
+
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Foreground" Value="#222222"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Border Background="White" CornerRadius="10" Margin="10">
             <Grid Margin="20">
@@ -29,12 +48,8 @@
                 <PasswordBox x:Name="PasswordBox" Grid.Row="4" Margin="60,10,0,0" VerticalAlignment="Center" 
                              HorizontalAlignment="Stretch" Background="White" FontFamily="Segoe UI"/>
                 <Button Content="Увійти" Grid.Row="6" Height="30" Width="100" HorizontalAlignment="Center" 
-                        VerticalAlignment="Center" Margin="0,10,0,0" Background="White" Foreground="#222222" 
-                        FontFamily="Segoe UI" FontWeight="Bold"
+                        VerticalAlignment="Center" Margin="0,10,0,0" Style="{StaticResource CustomButtonStyle}"
                         Click="LoginButton_Click">
-                    <Button.Effect>
-                        <DropShadowEffect Color="Gray" BlurRadius="0" ShadowDepth="2"/>
-                    </Button.Effect>
                 </Button>
             </Grid>
         </Border>

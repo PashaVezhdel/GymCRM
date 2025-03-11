@@ -7,38 +7,66 @@
         mc:Ignorable="d"
         Title="Реєстрація клієнта" Height="570" Width="350"
         WindowStartupLocation="CenterScreen" Icon="img/user.ico" ResizeMode="NoResize"
-        Background="#F0F4F8">
+        Background="#F0F4F8" FontFamily="Segoe UI">
 
     <Grid Margin="10">
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
 
             <Label Content="ПІБ:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="FullNameTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="FullNameTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Дата народження:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="DateOfBirthTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="DateOfBirthTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Телефон:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="PhoneNumberTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="PhoneNumberTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Остання оплата:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="LastPaymentDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="LastPaymentDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Кінець підписки:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="SubscriptionEndDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="SubscriptionEndDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Баланс:" FontFamily="Segoe UI" Foreground="#222222"/>
-            <TextBox Name="BalanceTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+            <TextBox Name="BalanceTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <Label Content="Коментар:" FontFamily="Segoe UI" Foreground="#222222"/>
             <TextBox Name="CommentTextBox" Height="75" AcceptsReturn="True" TextWrapping="Wrap"
-                     VerticalScrollBarVisibility="Auto" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
+                     VerticalScrollBarVisibility="Auto" Background="White" FontFamily="Segoe UI" Margin="0,5">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <StackPanel HorizontalAlignment="Center" Margin="5">
                 <Button Name="RegisterButton" Content="Зареєструвати" Width="120" Height="30" 
-                        FontFamily="Segoe UI" FontWeight="Bold" Background="White" Foreground="#222222">
+                        FontFamily="Segoe UI" Background="White" Foreground="#222222" Click="RegisterButton_Click">
                     <Button.Effect>
-                        <DropShadowEffect Color="Gray" BlurRadius="0" ShadowDepth="2"/>
+                        <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3"/>
                     </Button.Effect>
                 </Button>
             </StackPanel>
