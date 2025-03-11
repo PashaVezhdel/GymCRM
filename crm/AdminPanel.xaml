@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Панель адміністратора" Height="500" Width="700" Background="#F4F4F4" 
-        ResizeMode="NoResize" WindowState="Normal" Icon="img/admin.ico">
+        Title="Панель адміністратора" Height="520" Width="700" Background="#F0F4F8" 
+        ResizeMode="NoResize" WindowState="Normal" Icon="img/admin.ico"
+        FontFamily="Segoe UI">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -32,21 +33,20 @@
             </DataGrid.Columns>
         </DataGrid>
 
-
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
             <StackPanel Orientation="Vertical" Margin="10">
                 <TextBlock Text="Логін" FontWeight="Bold"/>
-                <TextBox x:Name="UsernameTextBox" Width="180" Height="30" Padding="5"/>
+                <TextBox x:Name="UsernameTextBox" Width="180" Height="30" Padding="5" Background="White"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Margin="10">
                 <TextBlock Text="Пароль" FontWeight="Bold"/>
-                <PasswordBox x:Name="PasswordBox" Width="180" Height="30" Padding="5"/>
+                <PasswordBox x:Name="PasswordBox" Width="180" Height="30" Padding="5" Background="White"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Margin="10">
                 <TextBlock Text="Роль" FontWeight="Bold"/>
-                <ComboBox x:Name="RoleComboBox" Width="150" Height="30">
+                <ComboBox x:Name="RoleComboBox" Width="150" Height="30" Background="White">
                     <ComboBoxItem Content="ADMIN"/>
                     <ComboBoxItem Content="EMPLOYEE"/>
                 </ComboBox>
@@ -54,15 +54,51 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,10">
-            <Button x:Name="CreateAccountButton" Content="Створити аккаунт" Margin="10" Click="CreateAccountButton_Click"/>
-            <Button x:Name="SaveChangesButton" Content="Зберегти зміни" Margin="10" Click="SaveChangesButton_Click"/>
-            <Button x:Name="DeleteAccountButton" Content="Видалити аккаунт" Margin="10" Click="DeleteAccountButton_Click"/>
+            <Button x:Name="CreateAccountButton" Content="Створити аккаунт" Margin="10" Click="CreateAccountButton_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
+            <Button x:Name="SaveChangesButton" Content="Зберегти зміни" Margin="10" Click="SaveChangesButton_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
+            <Button x:Name="DeleteAccountButton" Content="Видалити аккаунт" Margin="10" Click="DeleteAccountButton_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10" Click="MonitorDB_Button_Click"/>
-            <Button x:Name="RebootButton" Content="Перезавантажити служби БД" Margin="10" Click="RebootButton_Click"/>
-            <Button x:Name="AuthLogsButton" Content="Логи авторизації" Margin="10" Click="AuthLogsButton_Click"/>
+            <Button x:Name="MonitorDBButton" Content="Моніторинг БД" Margin="10" Click="MonitorDB_Button_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
+            <Button x:Name="RebootButton" Content="Перезавантажити служби БД" Margin="10" Click="RebootButton_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
+            <Button x:Name="AuthLogsButton" Content="Логи авторизації" Margin="10" Click="AuthLogsButton_Click"
+                    Background="White" BorderBrush="#DDD" BorderThickness="1" 
+                    HorizontalAlignment="Center" Padding="10,5">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.3" />
+                </Button.Effect>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
