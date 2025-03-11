@@ -6,35 +6,43 @@
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
         Title="Реєстрація клієнта" Height="570" Width="350"
-        WindowStartupLocation="CenterScreen" Icon="img/user.ico" ResizeMode="NoResize">
+        WindowStartupLocation="CenterScreen" Icon="img/user.ico" ResizeMode="NoResize"
+        Background="#F0F4F8">
 
     <Grid Margin="10">
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
 
-            <Label Content="ПІБ:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="FullNameTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="ПІБ:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="FullNameTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Дата народження:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="DateOfBirthTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Дата народження:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="DateOfBirthTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Телефон:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="PhoneNumberTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Телефон:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="PhoneNumberTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Остання оплата:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="LastPaymentDateTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Остання оплата:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="LastPaymentDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Кінець підписки:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="SubscriptionEndDateTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Кінець підписки:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="SubscriptionEndDateTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Баланс:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="BalanceTextBox" Height="25" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Баланс:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="BalanceTextBox" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
-            <Label Content="Коментар:" VerticalAlignment="Center" Height="25" HorizontalAlignment="Stretch"/>
-            <TextBox Name="CommentTextBox" Height="75" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" Margin="0,5"/>
+            <Label Content="Коментар:" FontFamily="Segoe UI" Foreground="#222222"/>
+            <TextBox Name="CommentTextBox" Height="75" AcceptsReturn="True" TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto" Background="White" FontFamily="Segoe UI" Margin="0,5"/>
 
             <StackPanel HorizontalAlignment="Center" Margin="5">
-                <Button Name="RegisterButton" Content="Зареєструвати" Width="120" Height="30" HorizontalAlignment="Center" Click="RegisterButton_Click"/>
+                <Button Name="RegisterButton" Content="Зареєструвати" Width="120" Height="30" 
+                        FontFamily="Segoe UI" FontWeight="Bold" Background="White" Foreground="#222222">
+                    <Button.Effect>
+                        <DropShadowEffect Color="Gray" BlurRadius="0" ShadowDepth="2"/>
+                    </Button.Effect>
+                </Button>
             </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
+

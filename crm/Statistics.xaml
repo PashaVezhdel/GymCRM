@@ -5,31 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crm"
         mc:Ignorable="d"
-        Title="Statistics" Height="200" Width="350" ResizeMode="NoResize" Icon="img/statistics.ico">
+        Title="Statistics" Height="200" Width="350" ResizeMode="NoResize" 
+        Icon="img/statistics.ico" Background="#F0F4F8">
+
     <Grid>
         <StackPanel Margin="10">
-            <TextBlock Text="Статистика клієнтів" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <TextBlock Text="Статистика клієнтів" FontSize="16" FontWeight="Bold" 
+                       FontFamily="Segoe UI" Foreground="#333333" HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Загальна кількість клієнтів:" VerticalAlignment="Center" Width="180"/>
-                <TextBlock Name="TotalClients" VerticalAlignment="Center" Width="100" />
+                <TextBlock Text="Загальна кількість клієнтів:" FontFamily="Segoe UI" 
+                           Foreground="#333333" VerticalAlignment="Center" Width="180"/>
+                <TextBlock Name="TotalClients" FontFamily="Segoe UI" Foreground="#333333" 
+                           FontWeight="Bold" VerticalAlignment="Center" Width="100"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Загальний баланс усіх клієнтів:" VerticalAlignment="Center" Width="180"/>
-                <TextBlock Name="TotalBalance" VerticalAlignment="Center" Width="100" />
+                <TextBlock Text="Загальний баланс усіх клієнтів:" FontFamily="Segoe UI" 
+                           Foreground="#333333" VerticalAlignment="Center" Width="180"/>
+                <TextBlock Name="TotalBalance" FontFamily="Segoe UI" Foreground="#333333" 
+                           FontWeight="Bold" VerticalAlignment="Center" Width="100"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Середній баланс клієнтів:" VerticalAlignment="Center" Width="180"/>
-                <TextBlock Name="AverageBalance" VerticalAlignment="Center" Width="100" />
+                <TextBlock Text="Середній баланс клієнтів:" FontFamily="Segoe UI" 
+                           Foreground="#333333" VerticalAlignment="Center" Width="180"/>
+                <TextBlock Name="AverageBalance" FontFamily="Segoe UI" Foreground="#333333" 
+                           FontWeight="Bold" VerticalAlignment="Center" Width="100"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Кількість клієнтів з 0 балансом:" VerticalAlignment="Center" Width="180"/>
-                <TextBlock Name="ZeroBalanceCount" VerticalAlignment="Center" Width="100" />
+                <TextBlock Text="Кількість клієнтів з 0 балансом:" FontFamily="Segoe UI" 
+                           Foreground="#333333" VerticalAlignment="Center" Width="180"/>
+                <TextBlock Name="ZeroBalanceCount" FontFamily="Segoe UI" Foreground="#333333" 
+                           FontWeight="Bold" VerticalAlignment="Center" Width="100"/>
             </StackPanel>
 
         </StackPanel>
     </Grid>
 </Window>
+
+
