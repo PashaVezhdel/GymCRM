@@ -32,7 +32,7 @@
             <Setter Property="BorderBrush" Value="#CCC"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="13"/>
             <Setter Property="RowBackground" Value="White"/>
             <Setter Property="AlternatingRowBackground" Value="#F4F4F4"/>
             <Setter Property="CellStyle">
@@ -82,7 +82,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Керування акаунтами" FontSize="20" FontWeight="Bold" Foreground="#333"
+        <TextBlock Text="Керування акаунтами" FontSize="18" FontWeight="Bold" Foreground="#333"
                    HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
         <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" IsReadOnly="True"

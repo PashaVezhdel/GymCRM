@@ -245,7 +245,7 @@ namespace crm
                 System.Diagnostics.Process.Start("net", "stop MySQL");
                 System.Threading.Thread.Sleep(2000);
                 System.Diagnostics.Process.Start("net", "start MySQL");
-                MessageBox.Show("БД успішно перезавантажена.");
+                MessageBox.Show("Служби БД успішно перезавантажені!.");
             }
             catch (Exception ex)
             {
